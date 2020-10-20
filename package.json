@@ -10,7 +10,7 @@
   "license": "MIT",
   "author": "Dan Abramov <dan.abramov@me.com> (https://github.com/gaearon)",
   "homepage": "https://github.com/reduxjs/react-redux",
-  "repository": "github:reduxjs/react-redux",
+  "repository": "github:triplehenry/react-redux",
   "bugs": "https://github.com/reduxjs/react-redux/issues",
   "main": "./lib/index.js",
   "unpkg": "dist/react-redux.js",
