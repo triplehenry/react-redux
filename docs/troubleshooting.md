@@ -1,9 +1,16 @@
+---
+id: troubleshooting
+title: Troubleshooting
+sidebar_label: Troubleshooting
+hide_title: true
+---
+
 ## Troubleshooting
 
 Make sure to check out [Troubleshooting Redux](http://redux.js.org/docs/Troubleshooting.html) first.
 
 ### I'm getting the following alert: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
-This warning is shown when using react 15.5.*. basically, now it's just a warning, but in react16 the application might break. the PropTypes should now be imported from 'prop-types' package, and not from the react package.
+This warning is shown when using react 15.5.*. Basically, now it's just a warning, but in react16 the application might break. the PropTypes should now be imported from 'prop-types' package, and not from the react package.
 
 Update to the latest version of react-redux.
 
@@ -17,11 +24,11 @@ In short,
 
 ### My views aren’t updating on route change with React Router 0.13
 
-If you’re using React Router 0.13, you might [bump into this problem](https://github.com/reactjs/react-redux/issues/43). The solution is simple: whenever you use `<RouteHandler>` or the `Handler` provided by `Router.run`, pass the router state to it.
+If you’re using React Router 0.13, you might [bump into this problem](https://github.com/reduxjs/react-redux/issues/43). The solution is simple: whenever you use `<RouteHandler>` or the `Handler` provided by `Router.run`, pass the router state to it.
 
 Root view:
 
-```js
+```jsx
 Router.run(routes, Router.HistoryLocation, (Handler, routerState) => { // note "routerState" here
   ReactDOM.render(
     <Provider store={store}>
@@ -55,7 +62,7 @@ The _best_ solution to this is to make sure that your components are pure and pa
 
 If that’s not practical for whatever reason (for example, if you’re using a library that depends heavily on React context), you may pass the `pure: false` option to `connect()`:
 
-```
+```js
 function mapStateToProps(state) {
   return { todos: state.todos }
 }
